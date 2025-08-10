@@ -4,7 +4,7 @@ using AutoBattler.Stats;
 
 namespace AutoBattler
 {
-	public partial class Player : CharacterBody2D
+	public partial class Player : Node2D
 	{
 		private HealthComponent _health;
 		private ManaComponent _mana;

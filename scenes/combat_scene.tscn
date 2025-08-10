@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bj3x44v6sh47w"]
+
+[node name="CombatScene" type="CanvasLayer"]
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
