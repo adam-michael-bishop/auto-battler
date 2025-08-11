@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=3 format=3]
+
+[ext_resource type="Script" uid="uid://b2nhfq1si7kl4" path="res://Scripts/Characters/CharacterClassResource.cs" id="1_class"]
+[ext_resource type="Resource" path="res://Resources/Stats/BaseStats_Warrior.tres" id="2_stats"]
+
+[resource]
+script = ExtResource("1_class")
+ClassName = "Warrior"
+BaseStats = ExtResource("2_stats")
+BonusHealth = 50
+BonusMana = 0
+BonusStamina = 0
+
+

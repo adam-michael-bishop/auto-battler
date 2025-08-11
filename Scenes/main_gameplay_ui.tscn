@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bawd4h3fv78jn"]
+
+[ext_resource type="PackedScene" uid="uid://c76ki2e3rrgbh" path="res://Scenes/player_stats.tscn" id="1_wvyyd"]
+
+[node name="MainGameplayUI" type="CanvasLayer"]
+
+[node name="PlayerStats" parent="." instance=ExtResource("1_wvyyd")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 79.0
+offset_bottom = 87.0
+grow_horizontal = 1
+grow_vertical = 1
+script = null
