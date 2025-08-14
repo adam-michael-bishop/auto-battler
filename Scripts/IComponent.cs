@@ -1,7 +1,6 @@
 using Godot;
 
-namespace AutoBattler {
-    public interface IComponent {
-
-    }
-}   
+namespace AutoBattler
+{
+    public interface IComponent { }
+}
