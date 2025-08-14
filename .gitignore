@@ -15,6 +15,7 @@ mono_crash.*
 
 # Editor settings
 .vscode/
+.config/
 
 # OS/user-specific
 .DS_Store
