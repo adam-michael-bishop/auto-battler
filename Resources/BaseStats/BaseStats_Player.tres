@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BaseStats" load_steps=2 format=3 uid="uid://b1eqbemmlwi52"]
+
+[ext_resource type="Script" uid="uid://b3ntfsln8f4ch" path="res://Scripts/Stats/BaseStats.cs" id="1_w1lx4"]
+
+[resource]
+script = ExtResource("1_w1lx4")
+MaxHealth = 100
+MaxMana = 50
+MaxStamina = 50
+Strength = 10
+Intelligence = 10
+Dexterity = 10
+Luck = 5
+metadata/_custom_type_script = "uid://b3ntfsln8f4ch"
