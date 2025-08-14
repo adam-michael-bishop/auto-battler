@@ -1,6 +1,8 @@
-[gd_scene format=3 uid="uid://c76ki2e3rrgbh"]
+[gd_scene load_steps=2 format=3 uid="uid://c76ki2e3rrgbh"]
 
-[node name="PlayerStats" type="PanelContainer"]
+[ext_resource type="Script" uid="uid://oc7a1br32wdy" path="res://Scripts/UI/PlayerStatsUI.cs" id="1_vjobs"]
+
+[node name="PlayerStats" type="PanelContainer" node_paths=PackedStringArray("_healthValue", "_manaValue", "_staminaValue")]
 anchors_preset = -1
 anchor_right = 0.097
 anchor_bottom = 0.081
@@ -8,6 +10,10 @@ offset_right = -0.240005
 offset_bottom = -0.480003
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_vjobs")
+_healthValue = NodePath("MarginContainer/GridContainer/HealthValue")
+_manaValue = NodePath("MarginContainer/GridContainer/ManaValue")
+_staminaValue = NodePath("MarginContainer/GridContainer/StaminaValue")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -26,6 +32,7 @@ text = "Health"
 
 [node name="HealthValue" type="Label" parent="MarginContainer/GridContainer"]
 layout_mode = 2
+text = "none"
 
 [node name="Mana" type="Label" parent="MarginContainer/GridContainer"]
 layout_mode = 2
@@ -33,6 +40,7 @@ text = "Mana"
 
 [node name="ManaValue" type="Label" parent="MarginContainer/GridContainer"]
 layout_mode = 2
+text = "none"
 
 [node name="Stamina" type="Label" parent="MarginContainer/GridContainer"]
 layout_mode = 2
@@ -40,3 +48,4 @@ text = "Stamina"
 
 [node name="StaminaValue" type="Label" parent="MarginContainer/GridContainer"]
 layout_mode = 2
+text = "none"
