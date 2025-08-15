@@ -5,7 +5,7 @@ using Godot;
 
 namespace AutoBattler
 {
-    public partial class GameManager : Node2D
+    public partial class GameManager : Node
     {
         [Export]
         public Player Player { get; set; }
@@ -15,6 +15,7 @@ namespace AutoBattler
 
         public override void _Ready()
         {
+            // Hook up the Player stats UI and the Player scenes
             PlayerStatsUI.Player = Player;
         }
     }
