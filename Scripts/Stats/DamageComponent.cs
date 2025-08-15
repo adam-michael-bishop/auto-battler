@@ -1,6 +1,9 @@
 using Godot;
 
-namespace AutoBattler.Mechanics
+namespace AutoBattler.Stats
 {
-    public partial class DamageComponent : Node { }
+    public partial class DamageComponent : Resource
+    {
+        public float DamageAmount { get; set; }
+    }
 }
