@@ -1,17 +1,17 @@
 using Godot;
 
-namespace AutoBattler.Stats
+namespace AutoBattler.Components
 {
-    public partial class ManaComponent : Node, IComponent
+    public partial class ManaComponent(float maxMana) : Node, IComponent
     {
         [Signal]
         public delegate void ManaChangedEventHandler(int current, int max);
 
         [Export]
-        public int MaxMana { get; set; }
+        public float MaxMana { get; set; } = maxMana;
 
-        private int _currentMana;
-        public int CurrentMana
+        private float _currentMana = maxMana;
+        public float CurrentMana
         {
             get => _currentMana;
             set
@@ -22,16 +22,6 @@ namespace AutoBattler.Stats
                     EmitSignal(nameof(ManaChanged), _currentMana, MaxMana);
                 }
             }
-        }
-
-        public override void _Ready()
-        {
-            CurrentMana = MaxMana;
-        }
-
-        public void Initialize(Node owner)
-        {
-            // Optional: store reference to owner or setup
         }
     }
 }

@@ -1,5 +1,5 @@
 using System;
-using AutoBattler.Stats;
+using AutoBattler.Components;
 using Godot;
 
 namespace AutoBattler.Abilities

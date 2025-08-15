@@ -1,6 +1,6 @@
 using Godot;
 
-namespace AutoBattler.Stats
+namespace AutoBattler.Components
 {
     public partial class DamageComponent : Resource
     {

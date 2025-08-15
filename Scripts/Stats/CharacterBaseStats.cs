@@ -3,16 +3,16 @@ using Godot;
 namespace AutoBattler.Stats
 {
     [GlobalClass]
-    public partial class BaseStats : Resource
+    public partial class CharacterBaseStats : Resource
     {
         [Export]
-        public int MaxHealth { get; set; }
+        public float MaxHealth { get; set; }
 
         [Export]
-        public int MaxMana { get; set; }
+        public float MaxMana { get; set; }
 
         [Export]
-        public int MaxStamina { get; set; }
+        public float MaxStamina { get; set; }
 
         [Export]
         public int Strength { get; set; }

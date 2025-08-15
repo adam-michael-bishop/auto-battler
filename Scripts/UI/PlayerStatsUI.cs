@@ -39,26 +39,26 @@ namespace AutoBattler.UI
 
         private void ConnectToPlayer()
         {
-            SetHealth(Player.Health.CurrentHP, Player.Health.MaxHP);
+            SetHealth(Player.Health.CurrentHealth, Player.Health.MaxHealth);
             SetMana(Player.Mana.CurrentMana, Player.Mana.MaxMana);
             SetStamina(Player.Stamina.CurrentStamina, Player.Stamina.MaxStamina);
 
-            Player.Health.Connect("HealthChanged", Callable.From<int, int>(SetHealth));
-            Player.Mana.Connect("ManaChanged", Callable.From<int, int>(SetMana));
-            Player.Stamina.Connect("StaminaChanged", Callable.From<int, int>(SetStamina));
+            Player.Health.Connect("HealthChanged", Callable.From<float, float>(SetHealth));
+            Player.Mana.Connect("ManaChanged", Callable.From<float, float>(SetMana));
+            Player.Stamina.Connect("StaminaChanged", Callable.From<float, float>(SetStamina));
         }
 
-        public void SetHealth(int value, int max)
+        public void SetHealth(float value, float max)
         {
             _healthValue.Text = $"{value} / {max}";
         }
 
-        public void SetMana(int value, int max)
+        public void SetMana(float value, float max)
         {
             _manaValue.Text = $"{value} / {max}";
         }
 
-        public void SetStamina(int value, int max)
+        public void SetStamina(float value, float max)
         {
             _staminaValue.Text = $"{value} / {max}";
         }

@@ -1,17 +1,17 @@
 using Godot;
 
-namespace AutoBattler.Stats
+namespace AutoBattler.Components
 {
-    public partial class StaminaComponent : Node, IComponent
+    public partial class StaminaComponent(float maxStamina) : Node, IComponent
     {
         [Signal]
         public delegate void StaminaChangedEventHandler(int current, int max);
 
         [Export]
-        public int MaxStamina { get; set; }
+        public float MaxStamina { get; set; } = maxStamina;
 
-        private int _currentStamina;
-        public int CurrentStamina
+        private float _currentStamina = maxStamina;
+        public float CurrentStamina
         {
             get => _currentStamina;
             set
@@ -22,16 +22,6 @@ namespace AutoBattler.Stats
                     EmitSignal(nameof(StaminaChanged), _currentStamina, MaxStamina);
                 }
             }
-        }
-
-        public override void _Ready()
-        {
-            CurrentStamina = MaxStamina;
-        }
-
-        public void Initialize(Node owner)
-        {
-            // Optional: store reference to owner or setup
         }
     }
 }

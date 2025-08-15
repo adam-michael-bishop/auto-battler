@@ -1,4 +1,5 @@
 using System;
+using AutoBattler.Components;
 using AutoBattler.Stats;
 using Godot;
 
@@ -11,7 +12,7 @@ namespace AutoBattler.PlayerNS
         private StaminaComponent _stamina;
 
         [Export]
-        public BaseStats PlayerBaseStats { get; set; }
+        public CharacterBaseStats PlayerBaseStats { get; set; }
 
         public HealthComponent Health => _health;
         public ManaComponent Mana => _mana;
@@ -21,31 +22,22 @@ namespace AutoBattler.PlayerNS
         {
             try
             {
-                _health = new HealthComponent();
+                _health = new HealthComponent(PlayerBaseStats.MaxHealth);
                 AddChild(_health);
-                _health.Initialize(this);
-                _health.MaxHP = PlayerBaseStats.MaxHealth;
-                _health.CurrentHP = _health.MaxHP;
 
-                _mana = new ManaComponent();
+                _mana = new ManaComponent(PlayerBaseStats.MaxMana);
                 AddChild(_mana);
-                _mana.Initialize(this);
-                _mana.MaxMana = PlayerBaseStats.MaxMana;
-                _mana.CurrentMana = _mana.MaxMana;
 
-                _stamina = new StaminaComponent();
+                _stamina = new StaminaComponent(PlayerBaseStats.MaxStamina);
                 AddChild(_stamina);
-                _stamina.Initialize(this);
-                _stamina.MaxStamina = PlayerBaseStats.MaxStamina;
-                _stamina.CurrentStamina = _stamina.MaxStamina;
 
                 GD.Print(
-                    $"HP={_health.MaxHP}, Mana={_mana.MaxMana}, Stamina={_stamina.MaxStamina}"
+                    $"HP={_health.MaxHealth}, Mana={_mana.MaxMana}, Stamina={_stamina.MaxStamina}"
                 );
             }
             catch (Exception e)
             {
-                GD.PrintErr(e);
+                GD.PrintErr("Error readying Player: " + e);
             }
         }
     }

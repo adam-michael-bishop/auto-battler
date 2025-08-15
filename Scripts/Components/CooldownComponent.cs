@@ -1,7 +1,7 @@
 using System;
 using Godot;
 
-namespace AutoBattler.Stats
+namespace AutoBattler.Components
 {
     public partial class CooldownComponent : Resource
     {
