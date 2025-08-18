@@ -5,6 +5,8 @@ namespace AutoBattler.Components
 {
     public partial class CooldownComponent : Resource
     {
-        public float CooldownLength { get; set; }
+        public float Length { get; set; }
+
+        public Timer Timer { get; set; } = new Timer();
     }
 }

@@ -5,6 +5,7 @@ namespace AutoBattler.UI
 {
     public partial class PlayerStatsUI : PanelContainer
     {
+        [Export]
         public Player Player { get; set; }
 
         [Export]
@@ -18,7 +19,7 @@ namespace AutoBattler.UI
 
         public override void _Ready()
         {
-            Player ??= GetTree().CurrentScene.GetNode<Player>("Player");
+            // Player ??= GetTree().CurrentScene.GetNode<Player>("Player");
 
             if (Player != null)
             {

@@ -1,15 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://com7lj1d2ude6"]
+[gd_scene load_steps=4 format=3 uid="uid://com7lj1d2ude6"]
 
-[ext_resource type="PackedScene" uid="uid://dmai0jwxsai3r" path="res://Scenes/game_manager.tscn" id="1_3dryh"]
 [ext_resource type="PackedScene" uid="uid://b8pg0cegg1n4e" path="res://Scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://bla2eyv6tea4s" path="res://Scenes/green_slime.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bawd4h3fv78jn" path="res://Scenes/main_gameplay_ui.tscn" id="3_lnu2h"]
 
 [node name="Game" type="Node2D"]
-
-[node name="GameManager" parent="." node_paths=PackedStringArray("Player", "PlayerStatsUI") instance=ExtResource("1_3dryh")]
-Player = NodePath("../Player")
-PlayerStatsUI = NodePath("../MainGameplayUI/PlayerStats")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -26)
@@ -22,5 +17,8 @@ position = Vector2(-35, 0)
 position = Vector2(38, 0)
 
 [node name="MainGameplayUI" parent="." instance=ExtResource("3_lnu2h")]
+
+[node name="PlayerStats" parent="MainGameplayUI" index="0" node_paths=PackedStringArray("Player")]
+Player = NodePath("../../Player")
 
 [editable path="MainGameplayUI"]
