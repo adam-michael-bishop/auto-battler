@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://bla2eyv6tea4s"]
+[gd_scene load_steps=13 format=3 uid="uid://bla2eyv6tea4s"]
 
 [ext_resource type="Texture2D" uid="uid://dy60182tnoe4j" path="res://Assests/sprites/slime_green.png" id="1_bln8p"]
 [ext_resource type="Script" uid="uid://be2c3pdkq6jlo" path="res://Scripts/Entities/Enemy.cs" id="1_h6nr7"]
+[ext_resource type="Resource" uid="uid://yw7py55lmcoq" path="res://Resources/BaseStats/BaseStats_GreenSlime.tres" id="2_is68s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kq38r"]
 atlas = ExtResource("1_bln8p")
@@ -74,6 +75,7 @@ animations = [{
 
 [node name="GreenSlime" type="Node2D"]
 script = ExtResource("1_h6nr7")
+EnemyBaseStats = ExtResource("2_is68s")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)

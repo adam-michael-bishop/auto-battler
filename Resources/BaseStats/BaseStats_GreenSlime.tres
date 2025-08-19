@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EnemyBaseStats" load_steps=2 format=3 uid="uid://yw7py55lmcoq"]
+
+[ext_resource type="Script" uid="uid://iehruypqj71g" path="res://Scripts/Stats/EnemyBaseStats.cs" id="1_pyosk"]
+
+[resource]
+script = ExtResource("1_pyosk")
+MaxHealth = 50.0
+MaxMana = 30.0
+MaxStamina = 30.0
+Strength = 5
+Intelligence = 1
+Dexterity = 3
+Luck = 2
+metadata/_custom_type_script = "uid://iehruypqj71g"
