@@ -1,4 +1,4 @@
-using AutoBattler.PlayerNS;
+using AutoBattler.Entities;
 using Godot;
 
 namespace AutoBattler.UI
@@ -19,8 +19,6 @@ namespace AutoBattler.UI
 
         public override void _Ready()
         {
-            // Player ??= GetTree().CurrentScene.GetNode<Player>("Player");
-
             if (Player != null)
             {
                 if (Player.IsInsideTree())

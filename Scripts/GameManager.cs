@@ -1,5 +1,5 @@
 using System;
-using AutoBattler.PlayerNS;
+using AutoBattler.Entities;
 using AutoBattler.UI;
 using Godot;
 

@@ -3,7 +3,7 @@ using AutoBattler.Components;
 using AutoBattler.Stats;
 using Godot;
 
-namespace AutoBattler.PlayerNS
+namespace AutoBattler.Entities
 {
     public partial class Player : Node2D
     {
